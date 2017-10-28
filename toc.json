@@ -1,5 +1,5 @@
 {
-    "preface" : [
+    "preface": [
         "introduction",
         "features",
         "examples"
@@ -11,22 +11,23 @@
     "integrations": [
         "index"
     ],
-    "usage": [
+    "topics": [
         "index",
-
+        "pagination",
+        "exceptions"
+    ],
+    "core-resources": [
+        "index",
+        "balance/index",
+        "balance/retrieve-current",
+        "balance/retrieve-single",
+        "balance/retrieve-all",
         "charges/index",
         "charges/create",
         "charges/retrieve-single",
         "charges/update",
         "charges/capture",
         "charges/retrieve-all",
-
-        "refunds/index",
-        "refunds/create",
-        "refunds/retrieve-single",
-        "refunds/update",
-        "refunds/retrieve-all",
-
         "customers/index",
         "customers/create",
         "customers/retrieve-single",
@@ -34,37 +35,44 @@
         "customers/delete",
         "customers/delete-discount",
         "customers/retrieve-all",
-
+        "disputes/index",
+        "disputes/update",
+        "disputes/close",
+        "events/index",
+        "events/retrieve-single",
+        "events/retrieve-all",
+        "file-uploads/index",
+        "payouts/index",
+        "refunds/index",
+        "refunds/create",
+        "refunds/retrieve-single",
+        "refunds/update",
+        "refunds/retrieve-all",
+        "tokens/index",
+        "tokens/create-card",
+        "tokens/create-bank",
+        "tokens/retrieve"
+    ],
+    "payment-methods": [
+        "index",
+        "bank-accounts/index",
         "cards/index",
         "cards/create",
         "cards/retrieve-single",
         "cards/update",
         "cards/delete",
         "cards/retrieve-all",
-
-        "subscriptions/index",
-        "subscriptions/create",
-        "subscriptions/retrieve-single",
-        "subscriptions/update",
-        "subscriptions/cancel",
-        "subscriptions/reactivate",
-        "subscriptions/delete-discount",
-        "subscriptions/retrieve-all",
-
-        "plans/index",
-        "plans/create",
-        "plans/retrieve-single",
-        "plans/update",
-        "plans/delete",
-        "plans/retrieve-all",
-
+        "sources/index"
+    ],
+    "subscriptions": [
+        "index",
         "coupons/index",
         "coupons/create",
         "coupons/retrieve-single",
         "coupons/update",
         "coupons/delete",
         "coupons/retrieve-all",
-
+        "discounts/index",
         "invoices/index",
         "invoices/create",
         "invoices/retrieve-single",
@@ -73,90 +81,80 @@
         "invoices/update",
         "invoices/pay",
         "invoices/retrieve-all",
-
         "invoice_items/index",
         "invoice_items/create",
         "invoice_items/retrieve-single",
         "invoice_items/update",
         "invoice_items/delete",
         "invoice_items/retrieve-all",
-
-        "disputes/index",
-        "disputes/update",
-        "disputes/close",
-
-        "transfers/index",
-        "transfers/create",
-        "transfers/retrieve-single",
-        "transfers/update",
-        "transfers/retrieve-all",
-
-        "transfer_reversals/index",
-        "transfer_reversals/create",
-        "transfer_reversals/retrieve-single",
-        "transfer_reversals/update",
-        "transfer_reversals/retrieve-all",
-
+        "plans/index",
+        "plans/create",
+        "plans/retrieve-single",
+        "plans/update",
+        "plans/delete",
+        "plans/retrieve-all",
+        "subscriptions/index",
+        "subscriptions/create",
+        "subscriptions/retrieve-single",
+        "subscriptions/update",
+        "subscriptions/cancel",
+        "subscriptions/reactivate",
+        "subscriptions/delete-discount",
+        "subscriptions/retrieve-all"
+    ],
+    "connect": [
+        "index",
+        "account/index",
+        "application_fee_refunds/index",
+        "application_fee_refunds/create",
+        "application_fee_refunds/retrieve-single",
+        "application_fee_refunds/update",
+        "application_fee_refunds/retrieve-all",
+        "application_fees/index",
+        "application_fees/retrieve-single",
+        "application_fees/retrieve-all",
         "recipients/index",
         "recipients/create",
         "recipients/retrieve-single",
         "recipients/update",
         "recipients/delete",
         "recipients/retrieve-all",
-
-        "products/index",
-        "products/create",
-        "products/retrieve-single",
-        "products/update",
-        "products/retrieve-all",
-
-        "skus/index",
-        "skus/create",
-        "skus/retrieve-single",
-        "skus/update",
-        "skus/retrieve-all",
-
+        "transfers/index",
+        "transfers/create",
+        "transfers/retrieve-single",
+        "transfers/update",
+        "transfers/retrieve-all",
+        "transfer_reversals/index",
+        "transfer_reversals/create",
+        "transfer_reversals/retrieve-single",
+        "transfer_reversals/update",
+        "transfer_reversals/retrieve-all"
+    ],
+    "relay": [
+        "index",
         "orders/index",
         "orders/create",
         "orders/retrieve-single",
         "orders/update",
         "orders/pay",
         "orders/retrieve-all",
-
-        "application_fees/index",
-        "application_fees/retrieve-single",
-        "application_fees/retrieve-all",
-
-        "application_fee_refunds/index",
-        "application_fee_refunds/create",
-        "application_fee_refunds/retrieve-single",
-        "application_fee_refunds/update",
-        "application_fee_refunds/retrieve-all",
-
-        "account",
-
-        "balance/index",
-        "balance/retrieve-current",
-        "balance/retrieve-single",
-        "balance/retrieve-all",
-
-        "events/index",
-        "events/retrieve-single",
-        "events/retrieve-all",
-
-        "tokens/index",
-        "tokens/create-card",
-        "tokens/create-bank",
-        "tokens/retrieve",
-
+        "products/index",
+        "products/create",
+        "products/retrieve-single",
+        "products/update",
+        "products/retrieve-all",
+        "skus/index",
+        "skus/create",
+        "skus/retrieve-single",
+        "skus/update",
+        "skus/retrieve-all"
+    ],
+    "usage": [
+        "index",
         "bitcoin/index",
         "bitcoin/create",
         "bitcoin/retrieve-single",
-        "bitcoin/retrieve-all",
-
-        "exceptions",
-        "pagination"
-
+        "bitcoin/retrieve-all"
     ],
     "addons": [
         "index",
