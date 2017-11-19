@@ -14,7 +14,8 @@
     "topics": [
         "index",
         "pagination",
-        "exceptions"
+        "exceptions",
+        "idempotent-requests"
     ],
     "core-resources": [
         "index",
@@ -148,13 +149,6 @@
         "skus/retrieve-single",
         "skus/update",
         "skus/retrieve-all"
-    ],
-    "usage": [
-        "index",
-        "bitcoin/index",
-        "bitcoin/create",
-        "bitcoin/retrieve-single",
-        "bitcoin/retrieve-all"
     ],
     "addons": [
         "index",
