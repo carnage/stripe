@@ -7,27 +7,24 @@ Depending on your dispute type, different evidence fields will give you a better
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$chargeId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The charge unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$disputeId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The dispute unique identifier.
+            </td>
         </tr>
-        <tr>
-            <td>$parameters</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>$parameters</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                Please refer to the list below for a valid list of keys that can be passed on this array.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -35,27 +32,33 @@ Depending on your dispute type, different evidence fields will give you a better
 ###### $parameters
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>evidence</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>An evidence that you can attach to a dispute object.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>evidence</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                Evidence to upload to respond to a dispute. Updating any field in the hash will submit all fields in the hash for review.
+            </td>
         </tr>
-        <tr>
-            <td>metadata</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>A set of key/value pairs that you can attach to a charge object.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>metadata</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                A set of key/value pairs that you can attach to a dispute object.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>boolean</small> <strong>submit</strong><br />
+                <small style="color: grey;">optional, default is <strong>true</strong></small>
+            </td>
+            <td width="80%">
+                Whether or not to immediately submit evidence to the bank. If `false`, evidence is staged on the dispute. Staged evidence is visible in the API and Dashboard, and can be submitted to the bank by making another request with this attribute set to `true` (the default).
+            </td>
         </tr>
     </tbody>
 </table>
@@ -63,7 +66,7 @@ Depending on your dispute type, different evidence fields will give you a better
 ##### Usage
 
 ```php
-$dispute = $stripe->disputes()->update('ch_4ECWMVQp5SJKEx', [
+$dispute = $stripe->disputes()->update('dp_1BPtTyK2uxncQly2o2gALyTT', [
     'evidence' => 'Customer agreed to drop the dispute.',
 ]);
 ```
