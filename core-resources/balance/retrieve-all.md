@@ -5,20 +5,14 @@ Returns a list of transactions that have contributed to the Stripe account balan
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$parameters</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>array</small> <strong>$parameters</strong>
+            </td>
+            <td width="80%">
+                Please refer to the list below for a valid list of key/value pairs that can be passed on this array.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -26,79 +20,74 @@ Returns a list of transactions that have contributed to the Stripe account balan
 ###### $parameters
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>available_on</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>A filter on the list based on the object available_on field.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>available_on</strong><br />
+                <small style="color: grey;">optional associative array</small>
+            </td>
+            <td width="80%">A filter on the list based on the object available_on field.</td>
         </tr>
-        <tr>
-            <td>created</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>A filter on the list based on the object created field.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>created</strong><br />
+                <small style="color: grey;">optional associative array</small>
+            </td>
+            <td width="80%">A filter on the list based on the object created field.</td>
         </tr>
-        <tr>
-            <td>currency</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td></td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>currency</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%"></td>
         </tr>
-        <tr>
-            <td>ending_before</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A cursor to be used in pagination.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>ending_before</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">A cursor to be used in pagination.</td>
         </tr>
-        <tr>
-            <td>limit</td>
-            <td>false</td>
-            <td>integer</td>
-            <td>10</td>
-            <td>A limit on the number of objects to be returned.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>limit</strong><br />
+                <small style="color: grey;">optional, default is <strong>10</strong></small>
+            </td>
+            <td width="80%">A limit on the number of objects to be returned.</td>
         </tr>
-        <tr>
-            <td>source</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>A filter on the list based on the object source field.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>payout</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">For automatic Stripe payouts only, only returns transactions that were payed out on the specified payout ID.</td>
         </tr>
-        <tr>
-            <td>starting_after</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A cursor to be used in pagination.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>source</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">Only returns the original transaction.</td>
         </tr>
-        <tr>
-            <td>transfer</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>For automatic Stripe transfers only, only returns transactions that were transferred out on the specified transfer ID.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>starting_after</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">A cursor to be used in pagination.</td>
         </tr>
-        <tr>
-            <td>type</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>Only returns transactions of the given type. One of: `charge`, `refund`, `adjustment`, `application_fee`, `application_fee_refund`, `transfer` or `transfer_failure`.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <strong>type</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">Only returns transactions of the given type. One of: `charge`, `refund`, `adjustment`, `application_fee`, `application_fee_refund`, `transfer` or `transfer_failure`.</td>
         </tr>
     </tbody>
 </table>
+
+> **Note:** For a more up to date list of parameters, please refer to the official Stripe documentation located [here](https://stripe.com/docs/api#balance_history).
 
 ##### Usage
 

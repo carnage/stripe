@@ -1,24 +1,19 @@
-#### Retrieve a balance history
+#### Retrieve a balance transaction
 
 Retrieves the balance transaction with the given ID.
 
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
         <tr>
-            <td>$transactionId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The transaction unique identifier.</td>
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$transactionId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The transaction unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>

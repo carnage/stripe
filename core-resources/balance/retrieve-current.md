@@ -1,4 +1,4 @@
-#### Retrieve account balance
+#### Retrieve balance
 
 Retrieves the current account balance, based on the API key that was used to make the request.
 
