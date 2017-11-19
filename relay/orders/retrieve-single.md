@@ -5,20 +5,15 @@ Retrieves the details of an existing order. Supply the unique order ID from eith
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$orderId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The order unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$orderId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The order unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>

@@ -141,6 +141,7 @@
         "orders/update",
         "orders/pay",
         "orders/retrieve-all",
+        "orders/return",
         "products/index",
         "products/create",
         "products/retrieve-single",

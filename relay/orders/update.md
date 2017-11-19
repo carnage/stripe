@@ -1,31 +1,28 @@
-#### Updates an order
+#### Update an order
 
 Updates the specific order by setting the values of the parameters passed. Any parameters not provided will be left unchanged. This request accepts only the `metadata`, and `status` as arguments.
 
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$orderId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The order unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$orderId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The order unique identifier.
+            </td>
         </tr>
-        <tr>
-            <td>$parameters</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>$parameters</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                Please refer to the list below for a valid list of keys that can be passed on this array.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -33,44 +30,47 @@ Updates the specific order by setting the values of the parameters passed. Any p
 ###### $parameters
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>coupon</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A coupon code that represents a discount to be applied to this order. Must be one-time duration and in same currency as the order.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>coupon</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                A coupon code that represents a discount to be applied to this order. Must be one-time duration and in same currency as the order.
+            </td>
         </tr>
-        <tr>
-            <td>metadata</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>A set of key/value pairs that you can attach to a transfer object.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>metadata</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                A set of key/value pairs that you can attach to a charge object.
+            </td>
         </tr>
-        <tr>
-            <td>selected_shipping_method</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The shipping method to select for fulfilling this order. If specified, must be one of the `id`s of a shipping method in the `shipping_methods` array. If specified, will overwrite the existing selected shipping method, updating `items` as necessary.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>shipping</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                Shipping information for the charge. Helps prevent fraud on charges for physica l goods.
+            </td>
         </tr>
-        <tr>
-            <td>status</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>Current order status. One of `created`, `paid`, `canceled`, `fulfilled`, or `returned`.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>boolean</small> <strong>status</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                Current order status. One of `created`, `paid`, `canceled`, `fulfilled`, or `returned`.
+            </td>
         </tr>
     </tbody>
 </table>
+
+> **Note:** For a more up to date list of parameters, please refer to the official Stripe documentation located [here](https://stripe.com/docs/api#update_order).
 
 ##### Usage
 
