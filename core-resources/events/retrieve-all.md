@@ -3,20 +3,15 @@
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$parameters</td>
-            <td>false</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>$parameters</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                Please refer to the list below for a valid list of keys that can be passed on this array.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -24,58 +19,53 @@
 ###### $parameters
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>created</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A filter on the list based on the object created field.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>created</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">A filter on the list based on the object created field.</td>
         </tr>
-        <tr>
-            <td>object_id</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The object identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>ending_before</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">A cursor to be used in pagination.</td>
         </tr>
-        <tr>
-            <td>ending_before</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A cursor to be used in pagination.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>integer</small> <strong>limit</strong><br />
+                <small style="color: grey;">optional, default is <strong>10</strong></small>
+            </td>
+            <td width="80%">A limit on the number of objects to be returned.</td>
         </tr>
-        <tr>
-            <td>limit</td>
-            <td>false</td>
-            <td>integer</td>
-            <td>10</td>
-            <td>A limit on the number of objects to be returned.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>starting_after</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">A cursor to be used in pagination.</td>
         </tr>
-        <tr>
-            <td>starting_after</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A cursor to be used in pagination.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>type</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">A string containing a specific event name, or group of events using * as a wildcard. The list will be filtered to include only events with a matching event property.</td>
         </tr>
-        <tr>
-            <td>type</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A string containing a specific event name, or group of events using * as a wildcard.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>types</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">An array of up to 20 strings containing specific event names. The list will be filtered to include only events with a matching event property. You may pass either `type` or `types`, but not both.</td>
         </tr>
     </tbody>
 </table>
+
+> **Note:** For a more up to date list of parameters, please refer to the official Stripe documentation located [here](https://stripe.com/docs/api#list_events).
 
 ##### Usage
 

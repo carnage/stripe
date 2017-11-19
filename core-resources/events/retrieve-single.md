@@ -3,20 +3,15 @@
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$eventId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The event unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$eventId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The event unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>
