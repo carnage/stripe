@@ -3,6 +3,8 @@
 ###### Retrieve all customers
 
 ```php
+use Cartalyst\Stripe\Stripe;
+
 $stripe = Stripe::make('your-stripe-api-key');
 
 $customers = $stripe->customers()->all();
@@ -15,6 +17,8 @@ foreach ($customers['data'] as $customer) {
 ###### Retrieve a customer
 
 ```php
+use Cartalyst\Stripe\Stripe;
+
 $stripe = Stripe::make('your-stripe-api-key');
 
 $customer = $stripe->customers()->find('cus_4EBumIjyaKooft');
