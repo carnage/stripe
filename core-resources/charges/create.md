@@ -5,20 +5,15 @@ To charge a credit card, you need to create a new charge object. If your API key
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$parameters</td>
-            <td>true</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>$parameters</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                Please refer to the list below for a valid list of keys that can be passed on this array.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -26,93 +21,141 @@ To charge a credit card, you need to create a new charge object. If your API key
 ###### $parameters
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>amount</td>
-            <td>true</td>
-            <td>number</td>
-            <td>null</td>
-            <td>A positive amount representing how much to charge the card. Note that this should be a dollar amount, and will automatically be converted in to cents for you before being transmitted to Stripe.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>amount</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                A positive amount representing how much to charge the card. Note that this should be a dollar amount, and will automatically be converted in to cents for you before being transmitted to Stripe.
+            </td>
         </tr>
-        <tr>
-            <td>currency</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>3-letter ISO code for currency.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>currency</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                3-letter ISO code for currency.
+            </td>
         </tr>
-        <tr>
-            <td>customer</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The customer unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small></small> <strong>application_fee</strong><br />
+                <small style="color: teal;">CONNECT ONLY</small><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                An application fee to add on to this charge.
+            </td>
         </tr>
-        <tr>
-            <td>source</td>
-            <td>false</td>
-            <td>string | array</td>
-            <td>null</td>
-            <td>The source can either be a token or a dictionary containing the source details.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>boolean</small> <strong>capture</strong><br />
+                <small style="color: grey;">optional, default is <strong>true</strong></small>
+            </td>
+            <td width="80%">
+                Whether or not to immediately capture the charge.
+            </td>
         </tr>
-        <tr>
-            <td>description</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>An arbitrary string which you can attach to a charge object.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>description</strong><br />
+                <small style="color: grey;">optional, default is <strong>null</strong></small>
+            </td>
+            <td width="80%">
+                An arbitrary string which you can attach to a charge object.
+            </td>
         </tr>
-        <tr>
-            <td>metadata</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>A set of key/value pairs that you can attach to a charge object.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>destination</strong><br />
+                <small style="color: teal;">CONNECT ONLY</small><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                If specified, the charge will be attributed to the destination account for tax reporting, and the funds from the charge will be transferred to the destination account. The ID of the resulting transfer will be returned in the transfer field of the response.
+            </td>
         </tr>
-        <tr>
-            <td>capture</td>
-            <td>false</td>
-            <td>bool</td>
-            <td>null</td>
-            <td>Whether or not to immediately capture the charge.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>transfer_group</strong><br />
+                <small style="color: teal;">CONNECT ONLY</small><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                A string that identifies this transaction as part of a group.
+            </td>
         </tr>
-        <tr>
-            <td>statement_descriptor</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>An arbitrary string to be displayed alongside your company name on your customer's credit card statement.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>on_behalf_of</strong><br />
+                <small style="color: teal;">CONNECT ONLY</small><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                The Stripe account ID that these funds are intended for. Automatically set if you use the `destination` parameter.
+            </td>
         </tr>
-        <tr>
-            <td>receipt_email</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The email address to send this charge’s receipt to.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>metadata</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                A set of key/value pairs that you can attach to a charge object.
+            </td>
         </tr>
-        <tr>
-            <td>application_fee</td>
-            <td>false</td>
-            <td>integer</td>
-            <td>null</td>
-            <td>An application fee to add on to this charge.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>receipt_email</strong><br />
+                <small style="color: grey;">optional, default is <strong>null</strong></small>
+            </td>
+            <td width="80%">
+                The email address to send this charge’s receipt to.
+            </td>
         </tr>
-        <tr>
-            <td>shipping</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>Shipping information for the charge. Helps prevent fraud on charges for physical goods.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>shipping</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                Shipping information for the charge. Helps prevent fraud on charges for physica l goods.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>customer</strong><br />
+                <small style="color: grey;">optional, either <strong>customer</strong> or <strong>source</strong> is required</small>
+            </td>
+            <td width="80%">
+                The customer unique identifier.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string|array</small> <strong>source</strong><br />
+                <small style="color: grey;">optional, either <strong>source</strong> or <strong>customer</strong> is required</small>
+            </td>
+            <td width="80%">
+                The source can either be a token or a dictionary containing the source details.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>statement_descriptor</strong><br />
+                <small style="color: grey;">optional, default is <strong>null</strong></small>
+            </td>
+            <td width="80%">
+                An arbitrary string to be displayed alongside your company name on your customer's credit card statement.
+            </td>
         </tr>
     </tbody>
 </table>
+
+> **Note:** For a more up to date list of parameters, please refer to the official Stripe documentation located [here](https://stripe.com/docs/api#create_charge).
 
 ##### Usage
 
