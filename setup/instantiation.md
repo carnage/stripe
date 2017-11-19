@@ -18,7 +18,9 @@ $stripe = Stripe::make('your-stripe-api-key', 'your-stripe-api-version');
 
 You can use environment variables instead of passing them as arguments.
 
-Considering that there are a few different ways of setting these environment variables, we're going to use the `export` as an example. Do keep in mind that these will not be permanently set and you should instead use a file like `.bashrc` to set them in a more permanent way.
+Considering that there are a few different ways of setting these environment variables, we're going to use the `export` as an example.
+
+> **Note:** On the following example, the keys will not be permanently set and you should instead use a file like `.bashrc` to set them in a more permanent way.
 
 On your terminal run the following
 
@@ -27,8 +29,6 @@ export STRIPE_API_KEY=your-stripe-api-key
 
 export STRIPE_API_VERSION=your-stripe-api-version
 ```
-
-> **Note:** To test that the environment keys are set, you can run `echo $STRIPE_API_KEY` on your terminal.
 
 Then upon instantiation, Stripe will auto detect these and use the variables accordingly.
 
