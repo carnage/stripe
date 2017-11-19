@@ -4,22 +4,12 @@
 
 Cartalyst packages utilize [Composer](http://getcomposer.org), for more information on how to install Composer please read the [Composer Documentation](https://getcomposer.org/doc/00-intro.md).
 
-#### Preparation
+Open your terminal and run the following:
 
-Open your `composer.json` file and add the following to the `require` array:
-
-	"cartalyst/stripe": "~2.0"
-
-> **Note:** Make sure that after the required changes your `composer.json` file is valid by running `composer validate`.
-
-#### Install the dependencies
-
-Run Composer to install or update the new requirement.
-
-	php composer install
-
-or
-
-	php composer update
+```
+composer require cartalyst/stripe:^2.0
+```
 
 Now you are able to require the `vendor/autoload.php` file to autoload the package.
+
+> **Note:** If you're using a modern PHP framework, the autoload file will be most likely automatically included for you.

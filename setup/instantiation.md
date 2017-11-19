@@ -8,21 +8,29 @@ use Cartalyst\Stripe\Stripe;
 $stripe = new Stripe('your-stripe-api-key', 'your-stripe-api-version');
 ```
 
+or
+
 ```php
 use Cartalyst\Stripe\Stripe;
 
 $stripe = Stripe::make('your-stripe-api-key', 'your-stripe-api-version');
 ```
 
-You can use environment variables instead of passing them as arguments, like so:
+You can use environment variables instead of passing them as arguments.
+
+Considering that there are a few different ways of setting these environment variables, we're going to use the `export` as an example. Do keep in mind that these will not be permanently set and you should instead use a file like `.bashrc` to set them in a more permanent way.
+
+On your terminal run the following
 
 ```php
-putenv('STRIPE_API_KEY=your-stripe-api-key');
+export STRIPE_API_KEY=your-stripe-api-key
 
-putenv('STRIPE_API_VERSION=your-stripe-api-version');
+export STRIPE_API_VERSION=your-stripe-api-version
 ```
 
-Then upon instantiation, Stripe will auto detect these and use accordingly.
+> **Note:** To test that the environment keys are set, you can run `echo $STRIPE_API_KEY` on your terminal.
+
+Then upon instantiation, Stripe will auto detect these and use the variables accordingly.
 
 ```php
 use Cartalyst\Stripe\Stripe;
@@ -30,8 +38,10 @@ use Cartalyst\Stripe\Stripe;
 $stripe = new Stripe();
 ```
 
+or
+
 ```php
 $stripe = Stripe::make();
 ```
 
-> **Note:** Please do note that the Stripe API KEY is always required to be defined, either through an environment variable or by passing it as the first argument.
+> **Note:** Please do note that the Stripe API KEY is always required to be defined, either through an environment variable or by just passing it as the first argument to the constructor.
