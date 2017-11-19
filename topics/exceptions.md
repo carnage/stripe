@@ -1,6 +1,6 @@
 ### Exceptions
 
-The Stripe API will throw a few exceptions when something is wrong, like when a credit card with a bad number is submited, an expired credit card or even when Stripe.com itself has done something wrong.
+The Stripe API will throw a few exceptions when something is wrong, like when a credit card with a bad number is submitted, an expired credit card or even when Stripe.com itself has done something wrong.
 
 Here is the list of all the exceptions that the Stripe API throws with a brief description:
 
