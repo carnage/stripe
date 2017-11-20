@@ -73,7 +73,7 @@ Creates a new order object.
                 <small style="color: grey;">optional, default is <strong>array()</strong></small>
             </td>
             <td width="80%">
-                A set of key/value pairs that you can attach to a charge object.
+                A set of key/value pairs that you can attach to a order object. It can be useful for storing additional information about the order in a structured format.
             </td>
         </tr>
         <tr valign="top">
