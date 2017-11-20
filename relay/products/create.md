@@ -5,20 +5,15 @@ Creates a new product object.
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$parameters</td>
-            <td>true</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>$parameters</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                Please refer to the list below for a valid list of keys that can be passed on this array.
+            </td>
         </tr>
     </tbody>
 </table>
@@ -26,93 +21,110 @@ Creates a new product object.
 ###### $parameters
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>id</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The products unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>id</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                The identifier for the product. Must be unique. If not provided, an identifier will be randomly generated.
+            </td>
         </tr>
-        <tr>
-            <td>name</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The product’s name, meant to be displayable to the customer.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>name</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The product’s name, meant to be displayable to the customer.
+            </td>
         </tr>
-        <tr>
-            <td>active</td>
-            <td>false</td>
-            <td>boolean</td>
-            <td>null</td>
-            <td>Only return products that are active or inactive (e.g. pass false to list all inactive products).</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>boolean</small> <strong>active</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                Whether or not the product is currently available for purchase. Defaults to `true`.
+            </td>
         </tr>
-        <tr>
-            <td>attributes</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>A list of up to 5 alphanumeric attributes that each SKU can provide values for (e.g. `[ "color", "size" ]`).</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>array</small> <strong>attributes</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                A list of up to 5 alphanumeric attributes that each SKU can provide values for (e.g. `["color", "size"]`).
+            </td>
         </tr>
-        <tr>
-            <td>caption</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A short one-line description of the product, meant to be displayable to the customer.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>caption</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                A short one-line description of the product, meant to be displayable to the customer.
+            </td>
         </tr>
-        <tr>
-            <td>description</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The product’s description, meant to be displayable to the customer.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>description</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                The product’s description, meant to be displayable to the customer.
+            </td>
         </tr>
-        <tr>
-            <td>images</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>A list of up to 8 URLs of images for this product, meant to be displayable to the customer.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>array</small> <strong>images</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                A list of up to 8 URLs of images for this product, meant to be displayable to the customer.
+            </td>
         </tr>
-        <tr>
-            <td>metadata</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>A set of key/value pairs that you can attach to a transfer object.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>metadata</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                A set of key/value pairs that you can attach to a product object. It can be useful for storing additional information about the product in a structured format.
+            </td>
         </tr>
-        <tr>
-            <td>package_dimensions</td>
-            <td>false</td>
-            <td>array</td>
-            <td>[]</td>
-            <td>The dimensions of this product, from the perspective of shipping. A SKU associated with this product can override this value by having its own `package_dimensions`.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>associative array</small> <strong>package_dimensions</strong><br />
+                <small style="color: grey;">optional, default is <strong>array()</strong></small>
+            </td>
+            <td width="80%">
+                The dimensions of this product for shipping purposes. A SKU associated with this product can override this value by having its own `package_dimensions`.
+            </td>
         </tr>
-        <tr>
-            <td>shippable</td>
-            <td>false</td>
-            <td>boolean</td>
-            <td>true</td>
-            <td>Whether this product is shipped (i.e. physical goods). Defaults to `true`.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>boolean</small> <strong>shippable</strong><br />
+                <small style="color: grey;">optional, default is <strong>true</strong></small>
+            </td>
+            <td width="80%">
+                Whether this product is shipped (i.e. physical goods). Defaults to `true`.
+            </td>
         </tr>
-        <tr>
-            <td>url</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>A URL of a publicly-accessible webpage for this product.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>url</strong><br />
+                <small style="color: grey;">optional</small>
+            </td>
+            <td width="80%">
+                A URL of a publicly-accessible webpage for this product.
+            </td>
         </tr>
     </tbody>
 </table>
+
+> **Note:** For a more up to date list of parameters, please refer to the official Stripe documentation located [here](https://stripe.com/docs/api#create_product).
 
 ##### Usage
 

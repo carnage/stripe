@@ -5,20 +5,15 @@ Retrieves the details of an existing product. Supply the unique product ID from 
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$productId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The product unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$productId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The product unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>
