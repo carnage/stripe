@@ -151,7 +151,8 @@
         "skus/create",
         "skus/retrieve-single",
         "skus/update",
-        "skus/retrieve-all"
+        "skus/retrieve-all",
+        "skus/delete"
     ],
     "addons": [
         "index",

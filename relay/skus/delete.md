@@ -1,6 +1,6 @@
-#### Retrieve a SKU
+#### Delete a SKU
 
-Retrieves the details of an existing SKU. Supply the unique SKU identifier from either a SKU creation request or from the product, and Stripe will return the corresponding SKU information.
+Delete a SKU. Deleting a SKU is only possible until it has been used in an order.
 
 ##### Arguments
 
@@ -21,7 +21,7 @@ Retrieves the details of an existing SKU. Supply the unique SKU identifier from 
 ##### Usage
 
 ```php
-$sku = $stripe->skus()->find('sku_Bnf8QnZxQ2UVtx');
+$sku = $stripe->skus()->delete('sku_Bnf8QnZxQ2UVtx');
 
-echo $sku['name'];
+echo $sku['deleted'];
 ```
