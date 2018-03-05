@@ -23,15 +23,15 @@ Returns a list of transactions that have contributed to the Stripe account balan
     <tbody>
         <tr valign="top">
             <td width="20%" style="text-align: right">
-                <small>associative array</small> <strong>available_on</strong><br />
-                <small style="color: grey;">optional</small>
+                <strong>available_on</strong><br />
+                <small style="color: grey;">optional associative array</small>
             </td>
             <td width="80%">A filter on the list based on the object available_on field.</td>
         </tr>
         <tr valign="top">
             <td width="20%" style="text-align: right">
-                <small>associative array</small> <strong>created</strong><br />
-                <small style="color: grey;">optional</small>
+                <strong>created</strong><br />
+                <small style="color: grey;">optional associative array</small>
             </td>
             <td width="80%">A filter on the list based on the object created field.</td>
         </tr>

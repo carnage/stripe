@@ -6,7 +6,7 @@ Retrieves the balance transaction with the given ID.
 
 <table>
     <tbody>
-        <tr>
+        <tr valign="top">
             <td width="20%" style="text-align: right">
                 <small>string</small> <strong>$transactionId</strong><br />
                 <small style="color: teal;">REQUIRED</small>

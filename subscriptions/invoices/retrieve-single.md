@@ -5,20 +5,15 @@ Retrieves the invoice with the given ID.
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$invoiceId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The invoice unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$invoiceId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The invoice unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>

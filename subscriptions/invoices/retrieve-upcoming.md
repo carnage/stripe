@@ -7,27 +7,23 @@ Note that when you are viewing an upcoming invoice, you are simply viewing a pre
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$customerId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The customer unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$customerId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The customer unique identifier.
+            </td>
         </tr>
-        <tr>
-            <td>$subscriptionId</td>
-            <td>false</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The subscription unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$subscriptionId</strong><br />
+            </td>
+            <td width="80%">
+                The subscription unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>

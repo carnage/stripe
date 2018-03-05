@@ -1,6 +1,6 @@
 ## Integrations
 
-Cartalyst Stripe is framework agnostic and as such can be integrated easily natively or with your favorite framework.
+Cartalyst Stripe is framework agnostic and as such can be integrated natively with ease or with your favorite framework.
 
 ### Laravel
 
@@ -15,3 +15,4 @@ Stripe Laravel                                         | Laravel
 [5.x](https://cartalyst.com/manual/stripe-laravel/5.0) | 5.3
 [6.x](https://cartalyst.com/manual/stripe-laravel/6.0) | 5.4
 [7.x](https://cartalyst.com/manual/stripe-laravel/7.0) | 5.5
+[8.x](https://cartalyst.com/manual/stripe-laravel/8.0) | 5.6

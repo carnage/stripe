@@ -12,4 +12,4 @@ composer require cartalyst/stripe:^2.0
 
 Now you are able to require the `vendor/autoload.php` file to autoload the package.
 
-> **Note:** If you're using a modern PHP framework, the autoload file will be most likely automatically included for you.
+> **Note:** If you're using a modern PHP framework like Laravel, the autoload file will be most likely automatically included for you.

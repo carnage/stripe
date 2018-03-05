@@ -5,27 +5,24 @@ Retrieves the details of an existing credit card.
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
     <tbody>
-        <tr>
-            <td>$customerId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The customer unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$customerId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The customer unique identifier.
+            </td>
         </tr>
-        <tr>
-            <td>$cardId</td>
-            <td>true</td>
-            <td>string</td>
-            <td>null</td>
-            <td>The card unique identifier.</td>
+        <tr valign="top">
+            <td width="20%" style="text-align: right">
+                <small>string</small> <strong>$cardId</strong><br />
+                <small style="color: teal;">REQUIRED</small>
+            </td>
+            <td width="80%">
+                The card unique identifier.
+            </td>
         </tr>
     </tbody>
 </table>

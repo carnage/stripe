@@ -1,6 +1,6 @@
-#### Retrieve a coupon
+#### Retrieve an invoice item
 
-Retrieves the coupon with the given ID.
+Retrieves the invoice item with the given ID.
 
 ##### Arguments
 
@@ -8,11 +8,11 @@ Retrieves the coupon with the given ID.
     <tbody>
         <tr valign="top">
             <td width="20%" style="text-align: right">
-                <small>string</small> <strong>$couponId</strong><br />
+                <small>string</small> <strong>$invoiceItemId</strong><br />
                 <small style="color: teal;">REQUIRED</small>
             </td>
             <td width="80%">
-                The coupon unique identifier.
+                The invoice item unique identifier.
             </td>
         </tr>
     </tbody>
@@ -21,7 +21,7 @@ Retrieves the coupon with the given ID.
 ##### Usage
 
 ```php
-$coupon = $stripe->coupons()->find('50-PERCENT-OFF');
+$invoiceItem = $stripe->invoiceItems()->find('ii_4Egr3tUtHjVEnm');
 
-echo $coupon['percent_off'];
+echo $invoiceItem['amount'];
 ```

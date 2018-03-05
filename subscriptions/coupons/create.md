@@ -7,22 +7,15 @@ A coupon has either a `percent_off` or an `amount_off` and `currency`. If you se
 ##### Arguments
 
 <table>
-    <thead>
-        <th>Key</th>
-        <th>Required</th>
-        <th>Type</th>
-        <th>Default</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>$parameters</td>
-            <td>true</td>
-            <td>array</td>
-            <td>null</td>
-            <td>Please refer to the list below for a valid list of keys that can be passed on this array.</td>
-        </tr>
-    </tbody>
+    <tr valign="top">
+        <td width="20%" style="text-align: right">
+            <small>array</small> <strong>$parameters</strong><br />
+            <small style="color: teal;">REQUIRED</small>
+        </td>
+        <td width="80%">
+            Please refer to the list below for a valid list of keys that can be passed on this array.
+        </td>
+    </tr>
 </table>
 
 ###### $parameters
